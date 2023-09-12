@@ -1,0 +1,144 @@
+
+.main-architecture
+{
+    &__star
+    {
+        position: absolute;
+        z-index: 0;
+        right: 10rem;
+        top: 15.5rem;
+        width: 22rem;
+        height: 22rem;
+        img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__wrap
+    {
+        margin-top: -16rem;
+        padding: 7rem 4.5rem;
+        background-color: rgba(217, 217, 217, 1);
+        border-radius: 16.5rem;
+    }
+    &__name
+    {
+        font-size: 8rem;
+        font-weight: 300;
+        line-height: 1em;
+        margin-bottom: -.25em;
+        
+    }
+    &__label
+    {
+        margin-left: -.1em;
+        margin-bottom: 9rem;
+        font-size: 21rem;
+        font-weight: 300;
+        line-height: 1em;
+    }
+    &__text
+    {
+        margin-bottom: 7.5rem;
+    }
+    &__img
+    {
+        width: 100%;
+        border-radius: 16rem;
+        overflow: hidden;
+        img
+        {
+            width: 100%;
+            aspect-ratio: 1/0.625;
+            object-fit: cover;
+        }
+    }
+    &__btn
+    {
+        margin-top: 12rem;
+        margin-inline: auto;
+    }
+}
+@media (max-width: 1600px) {
+    .main-architecture
+    {
+        &__star
+        {
+
+            height: 22rem;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .main-architecture
+    {
+        &__star
+        {
+            display: none;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .main-architecture
+    {
+        &__name
+        {
+            font-size: 34px;
+        }
+        &__label
+        {
+            font-size: 84px;
+        }
+        &__img
+        {
+            height: 470px;
+            border-radius: 120px;
+            margin-bottom: 30px;
+            img
+            {
+                height: 100%;
+                
+            }
+        }
+        &__card-text
+        {
+            margin-bottom: 30px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    #mainArchitecture
+    {
+        .container
+        {
+            width: 100%;
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    .main-architecture
+    {
+        &__wrap
+        {
+            margin-top: -40px;
+        }
+        &__name
+        {
+            font-size: 24px;
+        }
+        &__label
+        {
+            font-size: 64px;
+        }
+        &__text
+        {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        
+    }
+    
+}

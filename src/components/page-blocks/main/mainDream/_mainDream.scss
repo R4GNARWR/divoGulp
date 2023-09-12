@@ -1,0 +1,118 @@
+#mainDream
+{
+    padding-bottom: 30rem !important;
+}
+.main-dream
+{
+
+    &__name
+    {
+        margin-bottom: 9rem;
+    }
+    &__label
+    {
+        display: flex;
+        justify-content: flex-start;
+        color: #8A694F;
+        font-size:19rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        div
+        {
+            position: relative;
+            span
+            {
+                position: absolute;
+                left: 0;
+                top: calc(-3.6rem);
+                color: #FFF;
+                font-size: 7.2rem;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+        &:nth-child(1)
+        {
+            margin-bottom: 3.8rem;
+        }
+        &:nth-child(2)
+        {
+            justify-content: flex-end;
+            text-align: right;
+            span
+            {
+                left: .2em;
+            }
+        }
+    }
+    &__star-1
+    {
+        position: absolute;
+        right: 5rem;
+        top: 20rem;
+        z-index: -1;
+    }
+    &__star-2
+    {
+        position: absolute;
+        left: 5rem;
+        top: 55rem;
+        z-index: -1;
+    }
+}
+@media (max-width: 1200px)
+{
+    .main-dream
+    {
+        &__star-1
+        {
+            display: none;
+        }
+        &__star-2
+        {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    #mainDream
+    {
+        padding-top: 80px;
+        padding-bottom: 140px;
+    }
+    .main-dream
+    {
+        &__name
+        {
+            margin-bottom: 55px;
+            font-size: 24px;
+        }
+        &__label
+        {
+            font-weight: 300;
+            font-size: 64px;
+            div
+            {
+                position: relative;
+                span
+                {
+                    color: #FFF;
+                    font-size: 24px;
+                }
+            }
+            &:nth-child(1)
+            {
+                margin-bottom: 22px;
+            }
+            &:nth-child(2)
+            {
+                text-align: left;
+                justify-content: flex-start;
+                span
+                {
+                    left: 0;
+                }
+            }
+        }
+    }
+}

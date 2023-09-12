@@ -1,0 +1,112 @@
+.main-divology
+{
+    &__label
+    {
+        margin-bottom: 3.3rem;
+        font-size: 13rem;
+        text-align: center;
+        font-weight: 300;
+        line-height: 120px;
+    }
+    &__text
+    {
+        margin-bottom: 5rem;
+        font-size: 4.4rem;
+        text-align: center;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__card-wrap
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 6.5rem;
+    }
+    &__card
+    {
+        display: flex;
+        flex-direction: column;
+        img
+        {
+            margin-bottom: 5rem;
+            width: 100%;
+            aspect-ratio: 1/1.4;
+            border-radius: 26rem;
+        }
+        &-label
+        {
+            margin-bottom: 3.9rem;
+            font-size: 4.4rem;
+            font-weight: 500;
+            line-height: normal;
+        }
+        &-text
+        {
+
+        }
+    }
+}
+@media (max-width: 1800px) {
+    .main-divology
+    {
+        &__label
+        {
+            font-size: 10rem;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .main-divology
+    {
+        &__card-wrap
+        {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__card
+        {
+            img
+            {
+                margin-bottom: 30px;
+                border-radius: 120px;
+                object-fit: cover;
+                max-height: 470px;
+            }
+            &-label
+            {
+                margin-bottom: 30px;
+                font-size: 24px;
+            }
+            &-text
+            {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+@media (max-width: 768px) {
+    #mainDivology
+    {
+        .container
+        {
+            max-width: 100%;
+        }
+    }
+    .main-divology
+    {
+        &__label
+        {
+            margin-bottom: 0;
+            font-size: 24px;
+            text-align: left;
+            line-height: 1em;
+        }
+        &__text
+        {
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-align: left;
+        }
+    }
+}

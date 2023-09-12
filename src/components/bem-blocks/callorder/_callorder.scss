@@ -1,0 +1,110 @@
+.modal
+{
+    height: auto;
+    padding: 16.6rem 8.2rem 8.2rem 8.2rem;
+    max-width: 96rem;
+    background-color: $primary;
+    &-label
+    {
+        margin-bottom: 8.4rem;
+        color: #FFF;
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 48px */
+        text-transform: uppercase;
+    }
+    &-form
+    {
+        &__input
+        {
+            width: 100%;
+            margin-bottom: 1.7rem;
+            padding: 2.3rem;
+            color: #E4C3A9;
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid #C6A58B;
+            outline: none;
+            &::placeholder{
+                color: #E4C3A9;
+                font-size: 2.2rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+        }
+        .btn.btn-white
+        {
+            padding: 1rem 2rem;
+            margin-top: 13rem;
+        }
+        .custom-checkbox
+        {
+            width: 50%;
+            margin-top: 5rem;
+        }
+        .custom-checkbox__label::before
+        {
+            border-color: #FFFFFF;
+            border-image: none;
+            border-width: 1px;
+        }
+        .custom-checkbox__label .checkmark
+        {
+            background: url(../img/checkmark-white.svg) bottom center/contain no-repeat;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .modal
+    {
+        &-form
+        {
+            .custom-checkbox
+            {
+                width: 70%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .modal
+    {
+        padding: 132px 22px 60px 22px;
+        &-label
+        {
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+        &-form
+        {
+            &__input
+            {
+                margin-bottom: 17px;
+                padding: 23px 0;
+                font-size: 22px;
+                &::placeholder{
+                    font-size: 22px;
+                }
+            }
+            .btn.btn-white
+            {
+                font-size: 12px;
+                margin-top: 45px;
+            }
+            .custom-checkbox
+            {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}

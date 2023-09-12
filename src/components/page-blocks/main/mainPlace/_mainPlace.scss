@@ -1,0 +1,24 @@
+.main-place
+{
+    &__map
+    {
+        margin-top: 5rem;
+        height: 80rem;
+        .map
+        {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.ymaps-2-1-79-map-copyrights-promo
+{
+    display: none;
+}
+.ymaps-2-1-79-copyright__agreement
+{
+    display: none;
+}
+@media (max-width: 768px) {
+    
+}
