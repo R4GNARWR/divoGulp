@@ -1380,6 +1380,9 @@ footer {
 .header-links__callform:hover svg {
   fill: #8a694f!important
 }
+.header.admin {
+  top: 120px
+}
 .nav {
   position: fixed;
   left: 0;
@@ -1704,6 +1707,7 @@ footer {
   font-weight: 500
 }
 .main-banks__form {
+  margin-top: 20px;
   padding: 3rem 3.8rem;
   border-radius: 2.4rem;
   border: 2px solid #8a694f
@@ -1907,13 +1911,18 @@ footer {
   line-height: normal
 }
 .main-divology__card-wrap {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-column-gap: 6.5rem;
   -moz-column-gap: 6.5rem;
   column-gap: 6.5rem
 }
 .main-divology__card {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1925,7 +1934,7 @@ footer {
 .main-divology__card img {
   margin-bottom: 5rem;
   width: 100%;
-  aspect-ratio: 1/1.4;
+  height: 60rem;
   border-radius: 26rem
 }
 .main-divology__card-label {
@@ -1941,14 +1950,23 @@ footer {
 }
 @media (max-width:991px) {
   .main-divology__card-wrap {
-    grid-template-columns: repeat(1,1fr)
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .main-divology__card {
+    width: 100%
   }
   .main-divology__card img {
     margin-bottom: 30px;
     border-radius: 120px;
     -o-object-fit: cover;
     object-fit: cover;
-    max-height: 470px
+    height: 470px
   }
   .main-divology__card-label {
     margin-bottom: 30px;
@@ -1959,9 +1977,17 @@ footer {
     font-size: 14px
   }
 }
+@media (max-width:1800px) {
+  .main-divology__card-label {
+    font-size: 3.4rem
+  }
+}
 @media (max-width:768px) {
   #mainDivology .container {
     max-width: 100%
+  }
+  .main-divology__card {
+    width: 100%
   }
   .main-divology__label {
     margin-bottom: 0;
@@ -2003,7 +2029,7 @@ footer {
   color: #fff;
   font-size: 7.2rem;
   font-weight: 400;
-  text-transform: capitalize
+  text-transform: initial
 }
 .main-dream__label:nth-child(1) {
   margin-bottom: 3.8rem
@@ -2278,7 +2304,8 @@ footer {
   color: #fff;
   font-size: 7.2rem;
   line-height: 1.2em;
-  letter-spacing: -2.52px
+  letter-spacing: -2.52px;
+  text-transform: uppercase
 }
 .main-swiper__content-label span {
   font-weight: 700
