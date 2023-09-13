@@ -24,6 +24,24 @@ const mainSwiper = new Swiper('.main-swiper', {
     
   });
 
+  mainSwiper.on('slideChange', () => {
+  
+    const activeSlide = mainSwiper.slides[mainSwiper.activeIndex];
+    const activeSlideText = activeSlide.dataset.label;
+    const mainSliderContentText = document.querySelector('.main-swiper__content-label');
+   
+    if (mainSliderContentText && activeSlideText)
+    {
+      mainSliderContentText.innerHTML = activeSlideText;
+    }
+
+    // if (mainSliderContentBtnText && activeSlideBtnText)
+    // {
+    //   mainSliderContentBtnText.text = activeSlideBtnText;
+    // }
+    
+  })
+
   if(swipersTypical)
   {
       swipersTypical.forEach(swiper => {

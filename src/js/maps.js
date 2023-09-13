@@ -20,8 +20,8 @@ function initMaps()
                         dotPlacemark = new ymaps.Placemark([dot.lat, dot.lng], {}, {
                             iconLayout: 'default#image',
                             iconImageHref: dot.image || '',
-                            iconImageSize: [30, 42],
-                            iconImageOffset: [-5, -38]
+                            iconImageSize: [83, 96],
+                            iconImageOffset: [-42, -68]
                         });
                         
                         mapVar.geoObjects.add(dotPlacemark)
