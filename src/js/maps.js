@@ -15,14 +15,30 @@ function initMaps()
                 
                 if(data.dots)
                 {
+
                     const dotsArray = JSON.parse(data.dots)
                     dotsArray.forEach(dot => {
-                        dotPlacemark = new ymaps.Placemark([dot.lat, dot.lng], {}, {
-                            iconLayout: 'default#image',
-                            iconImageHref: dot.image || '',
-                            iconImageSize: [83, 96],
-                            iconImageOffset: [-42, -68]
-                        });
+                        console.log(dot)
+                        let dotPlacemark;
+                        if(dot.type === 'divo-residence') {
+                            dotPlacemark = new ymaps.Placemark([dot.lat, dot.lng], {}, {
+                                iconLayout: 'default#image',
+                                iconImageHref: dot.image || '',
+                                iconImageSize: [63, 76],
+                                iconImageOffset: [-22, -58]
+                            });
+                        } else {
+                            dotPlacemark = new ymaps.Placemark([dot.lat, dot.lng],{
+                                hintContent: dot.desc,
+                                balloonContent: dot.desc
+                                },{
+                                iconLayout: 'default#image',
+                                iconImageHref: dot.image || '',
+                                iconImageSize: [40, 40],
+                                iconImageOffset: [-10, -28]
+                            });
+                        }
+
                         
                         mapVar.geoObjects.add(dotPlacemark)
                     });
@@ -71,9 +87,15 @@ function initMaps()
                             mapVar.behaviors.disable('scrollZoom');
                         }
                     });
+                } else 
+                {
+                    mapVar.setZoom(15);
                 }
+
             });
         }
+
+
     })
     
 }

@@ -1,6 +1,13 @@
 #mainVisionary
 {
     padding: 20rem 0 25rem;
+    .wrap
+    {
+        padding: 10rem 0;
+        background-color: #d9d9d9;
+        border-radius: 16rem;
+        overflow: hidden;
+    }
 }
 .main-visionary
 {
@@ -13,15 +20,17 @@
 @media (max-width: 768px) {
     #mainVisionary
     {
+        padding: 40px 0 10px 0;
         border-radius: 60px;
-        background-color: #d9d9d9;
-    }
-    .wrap
-    {
-
-        overflow: hidden;
-        background-color: #d9d9d9;
-        background: url('../img/white-pattern.svg') 1000px top repeat;
+        background: #06142b;
+        .container
+        {
+            max-width: 100%;
+        }
+        .wrap
+        {
+            padding: 50px 0;
+        }
     }
     .main-visionary
     {

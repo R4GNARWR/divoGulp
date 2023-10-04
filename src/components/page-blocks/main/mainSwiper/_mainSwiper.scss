@@ -8,6 +8,20 @@
 {
     height: 79rem;
     border-radius: 80px;
+    position: relative;
+    &::before
+    {
+        content: '';
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        background: linear-gradient(194deg,rgba(6,20,43,.7) 25.15%,rgba(0,0,0,0) 54%) no-repeat;
+        background-blend-mode: multiply;
+        z-index: 10;
+    }
     &__content
     {
         position: absolute;
@@ -21,7 +35,6 @@
             font-size: 7.2rem;
             line-height: 1.2em;
             letter-spacing: -2.52px;
-            text-transform: uppercase;
             span
             {
                 font-weight: 700;
@@ -45,6 +58,11 @@
             position: absolute;
             bottom: 0;
             left: 0;
+            svg
+            {
+                width: 100%;
+                height: 100%;
+            }
         }
         &-2
         {
@@ -52,6 +70,11 @@
             position: absolute;
             bottom: 0;
             right: 0;
+            svg
+            {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
@@ -72,6 +95,20 @@
     .main-swiper
     {
         border-radius: 60px;
+        &::before
+        {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: block;
+            top: initial;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(0deg,rgba(6,20,43,.8) 25.15%,rgba(0,0,0,0) 54%) no-repeat;
+            background-blend-mode: multiply;
+            z-index: 10;
+        }
         &__pattern
         {
             &-1
@@ -90,7 +127,9 @@
         &__content
         {
             right: initial;
+            top: initial;
             left: 30px;
+            bottom: 15px;
           &-button
           {
             display: none;
